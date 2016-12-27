@@ -1,3 +1,45 @@
-.photo {
-  width: 500px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+}
+
+ul {
+  margin: 5%;
+}
+
+@mixin grid($cols, $mgn) {
+  float: left;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols );
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
+
+li {
+  @include grid(2, .3%);
+  list-style: none;
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  li {
+    @include grid(5, .5%);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  li {
+    @include grid(7, .5%);
+  }
 }
