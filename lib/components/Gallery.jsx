@@ -11,7 +11,7 @@ const Gallery = React.createClass({
   render() {
     const childElements = photos.map(function(photo) {
       return (
-        <li className='' key={photo.id}>
+        <li className='li' key={photo.id}>
           <img
             className=''
             src={photo.imgLink} />
@@ -20,7 +20,7 @@ const Gallery = React.createClass({
     });
     const childElements2 = commercial.map(function(photo) {
       return (
-        <li className='' key={photo.id}>
+        <li className='li' key={photo.id}>
           <img
             className=''
             src={photo.imgLink} />
@@ -31,7 +31,8 @@ const Gallery = React.createClass({
 
     return (
       <div className=''>
-        <div className='gallery-container'></div>
+            <div className='gallery-container'></div>
+
         <Masonry
           className={''}
           elementType={'ul'}
@@ -40,6 +41,7 @@ const Gallery = React.createClass({
           updateOnEachImageLoad={false}
         >
         {childElements}
+
         {childElements2}
         </Masonry>
       </div>

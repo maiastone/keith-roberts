@@ -17,15 +17,17 @@ class Header extends React.Component {
     return (
           <div>
             <nav className='header-container'>
-              <div className='logo-title-container'>
-                <img className='logo' src='./lib/styles/images/logo.svg'/>
-                <h1>Keith Roberts <span>Photography</span></h1>
-              </div>
+                <div className='left-side-header'>
+                  <img className='logo' src='./lib/styles/images/logo.svg'/>
+                  <h1>Keith Roberts <span>Photography</span></h1>
+                </div>
+                <div className='right-side-header'>
+                  <button onClick={() => this.openNav()}>Menu</button>
+                </div>
 
-              <button onClick={()=>this.openNav()}>Menu</button>
               <div id='theNav' className='overlay'>
                 <a href="javascript:void(0)"
-                  className="closebtn" onClick={()=>this.closeNav()}
+                  className="closebtn" onClick={() => this.closeNav()}
                   >&times;</a>
                 <div className='overlay-content'>
                   <Link to='/'>Featured</Link>
