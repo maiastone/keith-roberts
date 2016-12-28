@@ -4,7 +4,7 @@ import photos from '../photos.js';
 import commercial from '../commercial.js';
 
 const masonryOptions = {
-  transitionDuration: 0,
+  transitionDuration: 1,
 };
 
 const Gallery = React.createClass({
@@ -31,7 +31,7 @@ const Gallery = React.createClass({
 
     return (
       <div className=''>
-        <div className=''></div>
+        <div className='gallery-container'></div>
         <Masonry
           className={''}
           elementType={'ul'}

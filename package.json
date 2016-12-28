@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "imagesloaded": "^4.1.1",
-    "react-masonry-component": "^5.0.0"
+    "react-masonry-component": "^5.0.0",
+    "react-router": "^4.0.0-alpha.6"
   }
 }
