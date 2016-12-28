@@ -12,6 +12,8 @@ const Gallery = React.createClass({
     const childElements = photos.map(function(photo) {
       return (
         <li className='li' key={photo.id}>
+          <a id='filters2' href=''>{photo.description2}</a>
+          <a id='filters1' href=''>{photo.description}</a>
           <img
             className=''
             src={photo.imgLink} />
