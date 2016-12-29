@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
 import commercial from '../commercial.js';
+import LightBox from './LightBox.jsx'
 
 const masonryOptions = {
   transitionDuration: 1,
@@ -34,7 +35,7 @@ const Gallery = React.createClass({
     return (
       <div className=''>
             <div className='gallery-container'></div>
-
+        <LightBox />
         <Masonry
           className={''}
           elementType={'ul'}
