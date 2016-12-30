@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Modal from './Modal.jsx';
 
 
 class Header extends React.Component {
 
   openNav() {
-    document.getElementById("theNav").style.height = "100%";
+    document.getElementById('theNav').style.height = '100%';
   }
 
   closeNav() {
-    document.getElementById("theNav").style.height = "0%";
+    document.getElementById('theNav').style.height = '0%';
   }
 
   render() {

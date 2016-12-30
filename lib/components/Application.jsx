@@ -27,13 +27,16 @@ class Application extends React.Component {
     return (
       <div>
         <Header />
-        <div>
+
+      <div>
+        <button id='modal-button'>
           <a href='#'
             onClick={this.toggleModal.bind(this)}>
             {this.state.modalIsOpen ? 'Close Modal': 'Open Modal'}
           </a>
+        </button>
           <Modal open={this.state.modalIsOpen}>
-            {images}
+            <img className='modal-photo' src='./lib/styles/images/undersea/just-love-cc.jpg'/>
           </Modal>
         </div>
         <Gallery />

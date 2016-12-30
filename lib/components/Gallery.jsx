@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
-import commercial from '../commercial.js';
 
 // Yea so you will have to have the imageUrl in the modal, be a reference by index so that when you click "right" you just increment the index, and the "left" decrement the index of the array with image urls
 
@@ -19,10 +18,10 @@ class Gallery extends React.Component {
 
   render() {
 
-
     const childElements = photos.map(function(photo) {
       return (
-        <li className='li' key={photo.id}>
+        <li className='li'
+          key={photo.id}>
           <a id='filters2' href=''>{photo.description2}</a>
           <a id='filters1' href=''>{photo.description}</a>
             <img
@@ -32,16 +31,6 @@ class Gallery extends React.Component {
         </li>
       );
     });
-    const childElements2 = commercial.map(function(photo) {
-      return (
-        <li className='li' key={photo.id}>
-          <img
-            className=''
-            src={photo.imgLink} />
-        </li>
-      );
-    });
-
 
     return (
       <div className=''>
@@ -55,8 +44,6 @@ class Gallery extends React.Component {
           updateOnEachImageLoad={false}
         >
         {childElements}
-
-        {childElements2}
         </Masonry>
       </div>
     );

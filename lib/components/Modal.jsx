@@ -21,7 +21,10 @@ class Modal extends React.Component {
 
     const modalStyles = this.props.open ? styles.modalIsOpen : styles.modalIsClosed;
     return (
-      <div style={modalStyles}>{this.props.children}</div>
+      <div
+        style={modalStyles}>
+        {this.props.children}
+      </div>
     );
   }
 }
