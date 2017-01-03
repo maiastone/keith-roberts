@@ -9,8 +9,7 @@ const masonryOptions = {
 class Gallery extends React.Component {
 
   render() {
-
-    const childElements = photos.map(function(photo) {
+    const childElements = photos.map(function (photo) {
       return (
         <li className='photo-list'
           key={photo.id}>
@@ -28,15 +27,15 @@ class Gallery extends React.Component {
       <div className=''>
         <div className='gallery-container'></div>
 
-        <Masonry
-          className={''}
-          elementType={'ul'}
-          options={masonryOptions}
-          disableImagesLoaded={false}
-          updateOnEachImageLoad={false}
-        >
-        {childElements}
-        </Masonry>
+          <Masonry
+            className={''}
+            elementType={'ul'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false}
+          >
+          {childElements}
+          </Masonry>
       </div>
     );
   }

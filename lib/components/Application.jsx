@@ -36,9 +36,11 @@ class Application extends React.Component {
             {this.state.modalIsOpen ? 'Close Slideshow' : 'Open Slideshow'}
           </a>
         </button>
+
           <Modal open={this.state.modalIsOpen}>
             <img className='modal-photo' src='./lib/styles/images/undersea/just-love-cc.jpg'/>
           </Modal>
+
         </div>
         <Gallery />
       </div>
