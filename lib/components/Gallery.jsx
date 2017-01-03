@@ -5,11 +5,14 @@ import photos from '../photos.js';
 const masonryOptions = {
   transitionDuration: 1,
 };
+const style = {
+  marginBottom: 5,
+};
 
 class Gallery extends React.Component {
 
-  render() {
-    const childElements = photos.map(function (photo) {
+  createPhotoList(toggle) {
+    return photos.map(function (photo) {
       return (
         <li className='photo-list'
           key={photo.id}>
@@ -18,11 +21,14 @@ class Gallery extends React.Component {
             <img
               className='modal-content'
               src={photo.imgLink}
+              onClick={(e) => toggle(e, photo.id)}
             />
         </li>
       );
     });
+  }
 
+  render() {
     return (
       <div className=''>
         <div className='gallery-container'></div>
@@ -31,10 +37,11 @@ class Gallery extends React.Component {
             className={''}
             elementType={'ul'}
             options={masonryOptions}
+            style={style}
             disableImagesLoaded={false}
             updateOnEachImageLoad={false}
           >
-          {childElements}
+            {this.createPhotoList(this.props.toggleModal)}
           </Masonry>
       </div>
     );

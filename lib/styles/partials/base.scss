@@ -1,6 +1,5 @@
 $highlight-color: #F79122;
 
-/*renders sass math columns*/
 @mixin grid($cols, $mgn) {
   float: left;
   margin-right: $mgn;
@@ -70,21 +69,6 @@ button {
   }
 }
 
-#modal-button {
-  visibility: collapse;
-  margin-top: 15%;
-  margin-left: 7%;
-  width: 170px;
-  height: 40px;
-  font-size: 14px;
-}
-
-#modal-button-font {
-  margin-top: 10%;
-  &:hover {
-    color: white;
-  }
-}
 .logo {
   padding-right: 10px;
 }
@@ -130,8 +114,8 @@ button {
   justify-content: flex-start;
 }
 
-gallery-container {
-  margin-top: 100px;
+.gallery-container {
+  margin-top: 15%;
 }
 
 
@@ -141,10 +125,6 @@ gallery-container {
     display: flex;
     justify-content: space-between;
     width: 25%;
-  }
-  #modal-button {
-    visibility: visible;
-    margin-top: 14%;
   }
 }
 
