@@ -15,13 +15,13 @@ class Application extends React.Component {
 
   toggleModal() {
     this.setState({
-      modalIsOpen: !this.state.modalIsOpen
+      modalIsOpen: !this.state.modalIsOpen,
     });
   }
 
   render() {
     const images = [];
-    images.push(photos.map(function(photo) {
+    images.push(photos.map(function (photo) {
       return photo.imgLink;
     }));
     return (
@@ -30,9 +30,10 @@ class Application extends React.Component {
 
       <div>
         <button id='modal-button'>
-          <a href='#'
+          <a id='modal-button-font'
+            href='#'
             onClick={this.toggleModal.bind(this)}>
-            {this.state.modalIsOpen ? 'Close Modal': 'Open Modal'}
+            {this.state.modalIsOpen ? 'Close Slideshow' : 'Open Slideshow'}
           </a>
         </button>
           <Modal open={this.state.modalIsOpen}>
