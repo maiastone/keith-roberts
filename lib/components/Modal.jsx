@@ -11,6 +11,10 @@ class Modal extends React.Component {
         padding: '2rem',
         transform: 'translate Y(0%)',
         transition: 'all 1s ease',
+        width: '100%',
+        height: '90%',
+        position: 'absolute',
+        zIndex: '9999',
       },
       modalIsClosed: {
         display: 'none',

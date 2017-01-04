@@ -3,7 +3,8 @@ import Gallery from './Gallery.jsx';
 import Header from './Header.jsx';
 import Modal from './Modal.jsx'
 import photos from '../photos.js';
-
+// <img className='modal-content'
+//   src={photos[this.state.currentImage].imgLink}/>
 class Application extends React.Component {
   constructor() {
     super();
@@ -16,7 +17,7 @@ class Application extends React.Component {
   toggleModal(e, index) {
     this.setState({
       modalIsOpen: !this.state.modalIsOpen,
-      currentImage: index-1,
+      currentImage: index - 1,
     });
   }
 
@@ -26,14 +27,29 @@ class Application extends React.Component {
     });
   }
 
+  closeModal() {
+    this.setState({
+      modalIsOpen: false,
+    })
+  }
+
   render() {
     return (
       <div>
         <Header />
         <div className='modal-container'>
-          <Modal open={this.state.modalIsOpen}>
-            <img className='modal-content'
-              src={photos[this.state.currentImage].imgLink}/>
+          <Modal
+            className='modal'
+             open={this.state.modalIsOpen}>
+            <button
+              className='.close'
+
+            > X
+            </button>
+
+            <div
+              className='modal-div'
+               style={ { backgroundImage:'url('+ photos[this.state.currentImage].imgLink+')' } }></div>
             <button
               onClick={(e, index) => this.clickNext(e, index)}
             > >
@@ -41,7 +57,8 @@ class Application extends React.Component {
           </Modal>
         </div>
         <Gallery
-          toggleModal={(e, index) => this.toggleModal(e, index)}/>
+          toggleModal={(e, index) => this.toggleModal(e, index)}
+        />
       </div>
     );
   }
