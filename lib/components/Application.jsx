@@ -16,28 +16,21 @@ class Application extends React.Component {
   toggleModal(e, index) {
     this.setState({
       modalIsOpen: !this.state.modalIsOpen,
-      currentImage: index,
+      currentImage: index-1,
     });
   }
 
   render() {
-    const images = [];
-    images.push(photos.map(function (photo) {
-      return photo.imgLink;
-    }));
     return (
       <div>
         <Header />
-
-      <div>
-
-
+        <div>
           <Modal open={this.state.modalIsOpen}>
-            <img className='modal-photo' src='./lib/styles/images/undersea/just-love-cc.jpg'/>
+            <img src={photos[this.state.currentImage].imgLink}/>
           </Modal>
-
         </div>
-        <Gallery toggleModal={(e, index) => this.toggleModal(e, index)}/>
+        <Gallery
+          toggleModal={(e, index) => this.toggleModal(e, index)}/>
       </div>
     );
   }

@@ -6,7 +6,7 @@ const masonryOptions = {
   transitionDuration: 1,
 };
 const style = {
-  marginBottom: 5,
+  margin: 5,
 };
 
 class Gallery extends React.Component {
