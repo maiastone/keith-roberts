@@ -20,13 +20,24 @@ class Application extends React.Component {
     });
   }
 
+  clickNext(e, index) {
+    this.setState({
+      currentImage: index,
+    });
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <div>
+        <div className='modal-container'>
           <Modal open={this.state.modalIsOpen}>
-            <img src={photos[this.state.currentImage].imgLink}/>
+            <img className='modal-content'
+              src={photos[this.state.currentImage].imgLink}/>
+            <button
+              onClick={(e, index) => this.clickNext(e, index)}
+            > >
+            </button>
           </Modal>
         </div>
         <Gallery
