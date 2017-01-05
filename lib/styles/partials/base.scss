@@ -82,18 +82,17 @@ button {
 }
 
 #filters1 {
-  padding-top: 20%;
-  padding-left: 27%;
+  margin-top: 11%;
   font-size: 18px;
-  position: absolute;
 }
 
 #filters2 {
   @extend #filters1;
-  padding-left: 50%;
-  padding-right: 2%;
 }
 
+#fine-art {
+  margin-top: 12%;
+}
 
 /*containers*/
 .navBar {

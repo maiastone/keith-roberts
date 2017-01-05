@@ -11,6 +11,7 @@ class Application extends React.Component {
     this.state = {
       currentImage: 0,
       modalIsOpen: false,
+      filtered: photos,
     };
   }
 
@@ -21,13 +22,13 @@ class Application extends React.Component {
     });
   }
 
-  clickPrev(e, index) {
+  clickPrev() {
     this.setState({
       currentImage: this.state.currentImage - 1,
     });
   }
 
-  clickNext(e, index) {
+  clickNext() {
     this.setState({
       currentImage: this.state.currentImage + 1,
     });
@@ -37,10 +38,33 @@ class Application extends React.Component {
     this.setState({ modalIsOpen: false });
   }
 
+  filterPhotos(category) {
+    const filtered = photos.filter(function (photo) {
+      return (photo.category === category);
+    });
+    this.setState({
+      filtered: filtered,
+    });
+    console.log(filtered);
+  }
+
   render() {
     return (
       <div>
         <Header />
+
+        <button id='filters1'
+          onClick={() => this.filterPhotos('fine-art')}
+        >
+        Fine Art
+        </button>
+
+        <button id='filters2'
+          onClick={() => this.filterPhotos('undersea')}
+        >
+        Undersea
+        </button>
+
         <div className='modal-container'>
           <Modal
              open={this.state.modalIsOpen}>
@@ -60,12 +84,12 @@ class Application extends React.Component {
             </section>
 
             <button
-              onClick={(e, index) => this.clickPrev(e, index)}
+              onClick={() => this.clickPrev()}
             > >
             </button>
 
             <button
-              onClick={(e, index) => this.clickNext(e, index)}
+              onClick={() => this.clickNext()}
             > >
             </button>
 
