@@ -5,14 +5,11 @@ import photos from '../photos.js';
 const masonryOptions = {
   transitionDuration: 1,
 };
-const style = {
-  margin: 5,
-};
 
 class Gallery extends React.Component {
 
   createPhotoList(toggle) {
-    return photos.map(function (photo) {
+    return this.props.filtered.map(function (photo) {
       return (
         <li className='photo-list'
           key={photo.id}>
@@ -28,14 +25,12 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div className=''>
+      <div>
         <div className='gallery-container'></div>
 
           <Masonry
-            className={'masonry'}
             elementType={'ul'}
             options={masonryOptions}
-            style={style}
             disableImagesLoaded={false}
             updateOnEachImageLoad={false}
           >

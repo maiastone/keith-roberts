@@ -3,8 +3,8 @@ import Gallery from './Gallery.jsx';
 import Header from './Header.jsx';
 import Modal from './Modal.jsx'
 import photos from '../photos.js';
-// <img className='modal-content'
-//   src={photos[this.state.currentImage].imgLink}/>
+
+
 class Application extends React.Component {
   constructor() {
     super();
@@ -45,7 +45,6 @@ class Application extends React.Component {
     this.setState({
       filtered,
     });
-    console.log(filtered)
   }
 
   render() {
@@ -83,9 +82,12 @@ class Application extends React.Component {
 
           </Modal>
         </div>
+
         <Gallery
           toggleModal={(e, index) => this.toggleModal(e, index)}
+          filtered={this.state.filtered}
         />
+
       </div>
     );
   }
