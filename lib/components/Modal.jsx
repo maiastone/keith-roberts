@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import photos from '../photos.js';
 
 class Modal extends React.Component {
-  render(){
+  render() {
     const styles = {
       modalIsOpen: {
-        background: 'white',
-        boxShadow: '0 0 12px 0 rgba(0,0,0,.2)',
-        margin: '2rem',
-        padding: '2rem',
         transform: 'translate Y(0%)',
         transition: 'all 1s ease',
+        position: 'fixed', /* Stay in place */
+        left: '0',
+        top: '0',
+        padding: '2rem',
+        marginTop: '9%', /* Location of the box */
+        overflow: 'auto', /* Enable scroll if needed */
+        backgroundColor: 'rgba(0,0,0,0.9)', /* Black w/ opacity */
+        background: 'white',
+        boxShadow: '0 0 12px 0 rgba(0,0,0,.2)',
         width: '100%',
-        height: '90%',
-        position: 'absolute',
+        height: '89%',
         zIndex: '9999',
       },
       modalIsClosed: {

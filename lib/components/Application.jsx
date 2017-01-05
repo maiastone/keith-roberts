@@ -39,17 +39,20 @@ class Application extends React.Component {
         <Header />
         <div className='modal-container'>
           <Modal
-            className='modal'
              open={this.state.modalIsOpen}>
             <button
-              className='.close'
-
+              className='close'
             > X
             </button>
 
             <div
               className='modal-div'
-               style={ { backgroundImage:'url('+ photos[this.state.currentImage].imgLink+')' } }></div>
+               style={ {
+                 backgroundImage: 'url(' + photos[this.state.currentImage].imgLink + ')',
+               } }
+            >
+            </div>
+
             <button
               onClick={(e, index) => this.clickNext(e, index)}
             > >
