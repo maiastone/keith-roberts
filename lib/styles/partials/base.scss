@@ -55,7 +55,7 @@ ul {
 }
 
 button {
-  width: 100px;
+  width: 150px;
   height: 40px;
   background-color: transparent;
   border: 1px solid $highlight-color;
@@ -65,7 +65,7 @@ button {
   transition-timing-function: ease-in-out;
   &:hover {
     background: $highlight-color;
-    color: white;
+    color: $highlight-color;
   }
 }
 
@@ -81,19 +81,6 @@ button {
   margin: 5%;
 }
 
-#filters1 {
-  margin-top: 11%;
-  font-size: 18px;
-}
-
-#filters2 {
-  @extend #filters1;
-}
-
-#fine-art {
-  margin-top: 12%;
-}
-
 /*containers*/
 .navBar {
   display: block;
@@ -104,6 +91,7 @@ button {
 .header-container {
   display: flex;
   justify-content: flex-start;
+  align-items: middle;
   padding: 3%;
   position: fixed;
   top: 0;

@@ -43,28 +43,16 @@ class Application extends React.Component {
       return (photo.category === category);
     });
     this.setState({
-      filtered: filtered,
+      filtered,
     });
-    console.log(filtered);
+    console.log(filtered)
   }
 
   render() {
     return (
       <div>
-        <Header />
-
-        <button id='filters1'
-          onClick={() => this.filterPhotos('fine-art')}
-        >
-        Fine Art
-        </button>
-
-        <button id='filters2'
-          onClick={() => this.filterPhotos('undersea')}
-        >
-        Undersea
-        </button>
-
+        <Header
+          filterPhotos={this.filterPhotos.bind(this)}/>
         <div className='modal-container'>
           <Modal
              open={this.state.modalIsOpen}>
