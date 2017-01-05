@@ -11,7 +11,7 @@ class Modal extends React.Component {
         left: '0',
         top: '0',
         padding: '2rem',
-        marginTop: '9%', /* Location of the box */
+        marginTop: '11%', /* Location of the box */
         overflow: 'auto', /* Enable scroll if needed */
         backgroundColor: 'rgba(0,0,0,0.9)', /* Black w/ opacity */
         background: 'white',

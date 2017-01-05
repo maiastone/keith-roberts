@@ -28,9 +28,7 @@ class Application extends React.Component {
   }
 
   closeModal() {
-    this.setState({
-      modalIsOpen: false,
-    })
+    this.setState({ modalIsOpen: false })
   }
 
   render() {
@@ -42,6 +40,7 @@ class Application extends React.Component {
              open={this.state.modalIsOpen}>
             <button
               className='close'
+              onClick={() => this.closeModal()}
             > X
             </button>
 
