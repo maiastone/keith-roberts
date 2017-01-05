@@ -21,6 +21,12 @@ class Application extends React.Component {
     });
   }
 
+  clickPrev(e, index) {
+    this.setState({
+      currentImage: index - 2,
+    });
+  }
+
   clickNext(e, index) {
     this.setState({
       currentImage: index,
@@ -28,7 +34,7 @@ class Application extends React.Component {
   }
 
   closeModal() {
-    this.setState({ modalIsOpen: false })
+    this.setState({ modalIsOpen: false });
   }
 
   render() {
@@ -38,24 +44,31 @@ class Application extends React.Component {
         <div className='modal-container'>
           <Modal
              open={this.state.modalIsOpen}>
+
             <button
               className='close'
               onClick={() => this.closeModal()}
             > X
             </button>
 
-            <div
+            <section
               className='modal-div'
                style={ {
                  backgroundImage: 'url(' + photos[this.state.currentImage].imgLink + ')',
                } }
             >
-            </div>
+            </section>
+
+            <button
+              onClick={(e, index) => this.clickPrev(e, index)}
+            > >
+            </button>
 
             <button
               onClick={(e, index) => this.clickNext(e, index)}
             > >
             </button>
+
           </Modal>
         </div>
         <Gallery
