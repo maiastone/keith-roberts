@@ -28,6 +28,7 @@ class Application extends React.Component {
     });
   }
 
+
   clickNext() {
     this.setState({
       currentImage: this.state.currentImage + 1,
@@ -52,7 +53,8 @@ class Application extends React.Component {
       <div>
         <Header
           filterPhotos={this.filterPhotos.bind(this)}/>
-        <div className='modal-container'>
+
+      <div className='modal-container'>
           <Modal
              open={this.state.modalIsOpen}>
 
@@ -65,7 +67,7 @@ class Application extends React.Component {
             <section
               className='modal-div'
                style={ {
-                 backgroundImage: 'url(' + photos[this.state.currentImage].imgLink + ')',
+                 backgroundImage: 'url(' + this.state.filtered[this.state.currentImage].imgLink + ')',
                } }
             >
             </section>
