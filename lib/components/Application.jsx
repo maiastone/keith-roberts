@@ -17,19 +17,19 @@ class Application extends React.Component {
   toggleModal(e, index) {
     this.setState({
       modalIsOpen: !this.state.modalIsOpen,
-      currentImage: index - 1,
+      currentImage: index,
     });
   }
 
   clickPrev(e, index) {
     this.setState({
-      currentImage: index - 2,
+      currentImage: this.state.currentImage - 1,
     });
   }
 
   clickNext(e, index) {
     this.setState({
-      currentImage: index,
+      currentImage: this.state.currentImage + 1,
     });
   }
 

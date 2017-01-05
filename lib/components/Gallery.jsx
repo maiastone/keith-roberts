@@ -16,8 +16,6 @@ class Gallery extends React.Component {
       return (
         <li className='photo-list'
           key={photo.id}>
-          <a id='filters2' href=''>{photo.description2}</a>
-          <a id='filters1' href=''>{photo.description}</a>
             <img
               className='modal-content'
               src={photo.imgLink}
@@ -34,7 +32,7 @@ class Gallery extends React.Component {
         <div className='gallery-container'></div>
 
           <Masonry
-            className={''}
+            className={'masonry'}
             elementType={'ul'}
             options={masonryOptions}
             style={style}

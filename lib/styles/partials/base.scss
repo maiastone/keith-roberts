@@ -57,8 +57,8 @@ ul {
 button {
   width: 100px;
   height: 40px;
-  border: 3px solid $highlight-color;
-  background: none;
+  background-color: transparent;
+  border: 1px solid $highlight-color;
   font-size: 18px;
   text-transform: uppercase;
   transition-duration: 1s;
@@ -75,6 +75,10 @@ button {
 
 .photo-list {
   width: 400px;
+}
+
+.masonry {
+  margin: 5%;
 }
 
 #filters1 {
@@ -119,6 +123,11 @@ button {
   margin-top: 15%;
 }
 
+.right-side-header {
+  button {
+    background-color: white;
+  }
+}
 
 /*media queries*/
 @media screen and (min-width: 500px) {
@@ -126,6 +135,9 @@ button {
     display: flex;
     justify-content: space-between;
     width: 25%;
+  }
+  .photo-list {
+    width: 300px;
   }
 }
 
@@ -137,6 +149,12 @@ button {
   }
   h1 {
     font-size: 54px;
+  }
+  .closebtn {
+  position: absolute;
+  top: .4em;
+  right: 5.5%;
+  font-size: 5em;
   }
 }
 
