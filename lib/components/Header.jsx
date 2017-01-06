@@ -22,13 +22,13 @@ class Header extends React.Component {
                   <h1>Keith Roberts <span>Photography</span></h1>
                 </div>
                 <div className='right-side-header'>
-                  <button id='filters1'
+                  <button className='filters'
                     onClick={() => this.props.filterPhotos('fine-art')}
                   >
                   Fine Art
                   </button>
 
-                  <button id='filters2'
+                  <button className='filters'
                     onClick={() => this.props.filterPhotos('undersea')}
                   >
                   Undersea
@@ -44,6 +44,8 @@ class Header extends React.Component {
                 <div className='overlay-content'>
                   <Link to='/'>Featured</Link>
                   <Link to='/about'>About</Link>
+                  <Link className='mobile-nav' to='/fine-art'>Fine Art</Link>
+                  <Link className='mobile-nav' to='/undersea'>Undersea</Link>
                 </div>
               </div>
 
