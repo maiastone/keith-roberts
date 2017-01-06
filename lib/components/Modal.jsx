@@ -11,13 +11,13 @@ class Modal extends React.Component {
         left: '0',
         top: '0',
         padding: '2rem',
-        marginTop: '11%', /* Location of the box */
+        marginTop: '14%', /* Location of the box */
         overflow: 'auto', /* Enable scroll if needed */
         backgroundColor: 'rgba(0,0,0,0.9)', /* Black w/ opacity */
         background: 'white',
         boxShadow: '0 0 12px 0 rgba(0,0,0,.2)',
         width: '100%',
-        height: '89%',
+        height: '88%',
         zIndex: '9999',
       },
       modalIsClosed: {
@@ -29,7 +29,7 @@ class Modal extends React.Component {
 
     const modalStyles = this.props.open ? styles.modalIsOpen : styles.modalIsClosed;
     return (
-      <div
+      <div id='modal-div'
         style={modalStyles}>
         {this.props.children}
       </div>
