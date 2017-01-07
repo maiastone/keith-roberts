@@ -25,8 +25,7 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='gallery-container'></div>
+      <div className='gallery-container'>
 
           <Masonry
             elementType={'ul'}
