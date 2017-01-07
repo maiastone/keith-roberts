@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Gallery from './Gallery.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
-import Modal from './Modal.jsx'
+import Modal from './Modal.jsx';
 import photos from '../photos.js';
 
 
