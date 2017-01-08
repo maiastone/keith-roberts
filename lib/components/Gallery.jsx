@@ -9,18 +9,20 @@ const masonryOptions = {
 class Gallery extends React.Component {
 
   createPhotoList(toggle) {
-    return this.props.filtered.map(function (photo) {
-      return (
-        <li className='photo-list'
-          key={photo.id}>
-            <img
-              className='modal-content'
-              src={photo.imgLink}
-              onClick={(e) => toggle(e, photo.id)}
-            />
-        </li>
-      );
-    });
+    if (this.props.filtered) {
+      return this.props.filtered.map(function (photo) {
+        return (
+          <li className='photo-list'
+            key={photo.id}>
+              <img
+                className='modal-content'
+                src={photo.imgLink}
+                onClick={(e) => toggle(e, photo.id)}
+              />
+          </li>
+        );
+      });
+    }
   }
 
 
