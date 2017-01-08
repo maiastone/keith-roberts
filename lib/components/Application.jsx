@@ -51,47 +51,45 @@ class Application extends React.Component {
   render() {
     return (
       <div>
+
         <Header
-          filterPhotos={this.filterPhotos.bind(this)}/>
+          filterPhotos={this.filterPhotos.bind(this)}
+        />
 
-      <div className='modal-container'>
+        <div className='modal-container'>
           <Modal
-             open={this.state.modalIsOpen}>
-
+            open={this.state.modalIsOpen}>
             <button
               className='close'
               onClick={() => this.closeModal()}
             > X
             </button>
-
             <section
-              className='modal-div'
-               style={ {
+              className='modal-image-div'
+              style={ {
                  backgroundImage: 'url(' + this.state.filtered[this.state.currentImage].imgLink + ')',
-               } }
+             } }
             >
             </section>
-
             <button
               className='arrows'
               onClick={() => this.clickPrev()}
             > >
             </button>
-
             <button
               className='arrows'
               onClick={() => this.clickNext()}
             > >
             </button>
-
           </Modal>
         </div>
 
         <Gallery
           toggleModal={(e, index) => this.toggleModal(e, index)}
           filtered={this.state.filtered}
-          currentImage={this.state.currenImage}
+          currentImage={this.state.currentImage}
         />
+
       <Footer />
       </div>
     );

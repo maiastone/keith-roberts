@@ -3,7 +3,7 @@
   "description": "A site for fine art and commerical photography",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+     "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
     "build": "webpack.js",
     "test": "mocha --compilers js:babel/register"
   },

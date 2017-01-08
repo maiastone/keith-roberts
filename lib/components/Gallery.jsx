@@ -23,19 +23,19 @@ class Gallery extends React.Component {
     });
   }
 
+
   render() {
     return (
-      <div className='gallery-container'>
-
-          <Masonry
-            elementType={'ul'}
-            options={masonryOptions}
-            disableImagesLoaded={false}
-            updateOnEachImageLoad={false}
-          >
-            {this.createPhotoList(this.props.toggleModal)}
-          </Masonry>
-      </div>
+        <div className='gallery-container'>
+            <Masonry
+              elementType={'ul'}
+              options={masonryOptions}
+              disableImagesLoaded={false}
+              updateOnEachImageLoad={false}
+            >
+              {this.createPhotoList(this.props.toggleModal)}
+            </Masonry>
+        </div>
     );
   }
 }
