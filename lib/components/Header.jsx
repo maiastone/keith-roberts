@@ -22,7 +22,6 @@ class Header extends React.Component {
                   <h1>Keith Roberts <span>Photography</span></h1>
                 </div>
                 <div className='right-side-header'>
-                
 
                   <button onClick={() => this.openNav()}>Menu
                   </button>

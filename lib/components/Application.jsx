@@ -10,6 +10,7 @@ class Application extends React.Component {
   constructor() {
     super();
     this.state = {
+      filter: 'featured',
       currentImage: 0,
       modalIsOpen: false,
       filtered: photos,
@@ -39,29 +40,32 @@ class Application extends React.Component {
     this.setState({ modalIsOpen: false });
   }
 
-  filterPhotos(category) {
-    const filtered = photos.filter(function (photo) {
-      return (photo.category === category);
-    });
-    this.setState({
-      filtered,
-    });
+  updateFilter(filter) {
+    this.setState({ filter });
   }
 
-  unfilterPhotos() {
+  filterPhotos() {
+    const currentFilter = this.state.filter;
+    if (currentFilter === 'featured') {
+      return photos;
+    } else {
+      return photos.filter(function (photo) {
+        return (photo.category === currentFilter);
+      });
+    }
+  }
+
+  componentDidMount() {
     this.setState({
-      filtered: photos,
-    });
+      filter: this.props.pathname.slice(1) });
   }
 
   render() {
-    console.log(this.props)
+    const filteredPhotos = this.filterPhotos();
     return (
       <div>
+        <Header />
 
-        <Header
-
-            />
         <main>
           <div className='modal-container'>
             <Modal
@@ -74,8 +78,8 @@ class Application extends React.Component {
               <section
                 className='modal-image-div'
                 style={ {
-                   backgroundImage: 'url(' + this.state.filtered[this.state.currentImage].imgLink + ')',
-               } }
+                  backgroundImage: 'url(' + filteredPhotos[this.state.currentImage].imgLink + ')',
+                } }
               >
               </section>
               <button
@@ -92,10 +96,9 @@ class Application extends React.Component {
           </div>
 
           <Gallery
-            filterPhotos={this.filterPhotos.bind(this)}
-            unfilterPhotos={this.unfilterPhotos.bind(this)}
+            updateFilter={this.updateFilter.bind(this)}
             toggleModal={(e, index) => this.toggleModal(e, index)}
-            filtered={this.state.filtered}
+            filtered={filteredPhotos}
             currentImage={this.state.currentImage}
           />
         </main>

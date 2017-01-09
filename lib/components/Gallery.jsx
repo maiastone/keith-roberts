@@ -9,7 +9,6 @@ const masonryOptions = {
 class Gallery extends React.Component {
 
   createPhotoList(toggle) {
-    if (this.props.filtered) {
       return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
@@ -22,7 +21,6 @@ class Gallery extends React.Component {
           </li>
         );
       });
-    }
   }
 
 
@@ -32,20 +30,20 @@ class Gallery extends React.Component {
           <div className='button-container'>
             <button
               id='gallery' className='filters'
-              onClick={() => this.props.unfilterPhotos()}
+              onClick={() => this.props.updateFilter('featured')}
             >
             All Work
             </button>
 
             <button
               id='fine-art' className='filters'
-              onClick={() => this.props.filterPhotos('fine-art')}
+              onClick={() => this.props.updateFilter('fine-art')}
             >
             Fine Art
             </button>
 
             <button className='filters'
-              onClick={() => this.props.filterPhotos('undersea')}
+              onClick={() => this.props.updateFilter('undersea')}
             >
             Undersea
             </button>

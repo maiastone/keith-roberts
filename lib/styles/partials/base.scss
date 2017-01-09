@@ -62,7 +62,6 @@ button {
   outline: none;
   &:hover {
     background-color: #ffffff;
-    font-weight: bold;
   }
 }
 .arrows {
@@ -222,6 +221,10 @@ main {
   }
   .filters {
     display: inline-block;
+    margin: 1%;
+    &:hover {
+      background-color: $highlight-color;
+    }
   }
   .header-container {
     display: flex;
@@ -238,7 +241,7 @@ main {
     top: 10px;
   }
   .about-container {
-    margin-top: 20%;
+    margin-top: 15%;
   }
   .about-content {
   box-shadow: 1px 1px 5px #e0e0e0;
