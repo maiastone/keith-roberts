@@ -55,13 +55,13 @@ class Application extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div>
 
         <Header
-          filterPhotos={this.filterPhotos.bind(this)}
-          unfilterPhotos={this.unfilterPhotos.bind(this)}
-        />
+
+            />
         <main>
           <div className='modal-container'>
             <Modal
@@ -92,6 +92,8 @@ class Application extends React.Component {
           </div>
 
           <Gallery
+            filterPhotos={this.filterPhotos.bind(this)}
+            unfilterPhotos={this.unfilterPhotos.bind(this)}
             toggleModal={(e, index) => this.toggleModal(e, index)}
             filtered={this.state.filtered}
             currentImage={this.state.currentImage}

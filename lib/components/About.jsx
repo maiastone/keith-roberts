@@ -7,6 +7,7 @@ const About = () => {
     <div>
       <Header />
       <div className='about-container'>
+        <h1 id="about-title">Keith Roberts</h1>
         <div className='about-content'>
           <img src ='https://www.zenman.com/wp-content/uploads/2015/05/keith_a-300x300.jpg'/>
           <p>

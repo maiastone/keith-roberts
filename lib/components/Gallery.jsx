@@ -29,6 +29,28 @@ class Gallery extends React.Component {
   render() {
     return (
         <div className='gallery-container'>
+          <div className='button-container'>
+            <button
+              id='gallery' className='filters'
+              onClick={() => this.props.unfilterPhotos()}
+            >
+            All Work
+            </button>
+
+            <button
+              id='fine-art' className='filters'
+              onClick={() => this.props.filterPhotos('fine-art')}
+            >
+            Fine Art
+            </button>
+
+            <button className='filters'
+              onClick={() => this.props.filterPhotos('undersea')}
+            >
+            Undersea
+            </button>
+          </div>
+
             <Masonry
               elementType={'ul'}
               options={masonryOptions}

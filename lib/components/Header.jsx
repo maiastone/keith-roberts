@@ -22,25 +22,7 @@ class Header extends React.Component {
                   <h1>Keith Roberts <span>Photography</span></h1>
                 </div>
                 <div className='right-side-header'>
-                  <button
-                    id='gallery' className='filters'
-                    onClick={() => this.props.unfilterPhotos()}
-                  >
-                  Gallery
-                  </button>
-
-                  <button
-                    id='fine-art' className='filters'
-                    onClick={() => this.props.filterPhotos('fine-art')}
-                  >
-                  Fine Art
-                  </button>
-
-                  <button className='filters'
-                    onClick={() => this.props.filterPhotos('undersea')}
-                  >
-                  Undersea
-                  </button>
+                
 
                   <button onClick={() => this.openNav()}>Menu
                   </button>

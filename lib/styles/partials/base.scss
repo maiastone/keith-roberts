@@ -113,9 +113,17 @@ button {
     width: 60px;
   }
 }
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 2%;
+  margin: 1%;
+
+}
 
 .gallery-container {
-  margin: 25% 5% 10% 5%;
+  margin: 10% 5% 10% 5%;
 }
 
 .footer-container {
@@ -162,7 +170,10 @@ main {
 #modal-div {
   height: 100%;
   margin-top: 0;
+}
 
+#about-title {
+  padding: 2% 0 5% 10%;
 }
 
 /*media queries*/
@@ -207,7 +218,7 @@ main {
     display: none;
   }
   .gallery-container {
-    margin-top: 15%;
+    margin-top: 8%;
   }
   .filters {
     display: inline-block;
@@ -249,7 +260,7 @@ main {
 
 }
 button {
-  width: 75px;
+  width: 100px;
   font-size: 12px;
 }
 
