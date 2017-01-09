@@ -21,9 +21,9 @@ describe('Application', () => {
     const wrapper = shallow(<Application />);
     expect(wrapper.state().modalIsOpen).to.be.false;
   });
-  it.skip('should have a default filtered state which displays all photos(not filtered)', () => {
+  it('should have a default filtered state which displays all photos(not filtered)', () => {
     const wrapper = shallow(<Application />);
-    expect(wrapper.state().filtered).to.equal([photos]);
+    expect((wrapper.state().filtered).length, 19);
   });
   it('should render the header component', () => {
     const wrapper = shallow(<Application />);

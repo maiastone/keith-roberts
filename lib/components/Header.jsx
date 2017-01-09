@@ -18,11 +18,19 @@ class Header extends React.Component {
           <div>
             <nav className='header-container'>
                 <div className='left-side-header'>
-                  <img className='logo' src='./lib/styles/images/logo.svg'/>
+                  <img className='logo' src='./lib/styles/images/logo.png'/>
                   <h1>Keith Roberts <span>Photography</span></h1>
                 </div>
                 <div className='right-side-header'>
-                  <button className='filters'
+                  <button
+                    id='gallery' className='filters'
+                    onClick={() => this.props.unfilterPhotos()}
+                  >
+                  Gallery
+                  </button>
+
+                  <button
+                    id='fine-art' className='filters'
                     onClick={() => this.props.filterPhotos('fine-art')}
                   >
                   Fine Art

@@ -12,8 +12,10 @@ global.document = require('jsdom').jsdom(`
   <body>
     <div class="application"></div>
     <script src="main.bundle.js"></script>
-`)
+  </body>
+`);
 global.Element = function () {};
 global.HTMLElement = () => {};
-global.window = document.defaultView
-global.navigator = window.navigator
+global.window = document.defaultView;
+global.navigator = window.navigator;
+global.getComputedStyle = global.window.getComputedStyle;

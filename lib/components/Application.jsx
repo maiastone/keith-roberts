@@ -48,12 +48,19 @@ class Application extends React.Component {
     });
   }
 
+  unfilterPhotos() {
+    this.setState({
+      filtered: photos,
+    })
+  }
+
   render() {
     return (
       <div>
 
         <Header
           filterPhotos={this.filterPhotos.bind(this)}
+          unfilterPhotos={this.unfilterPhotos.bind(this)}
         />
 
         <div className='modal-container'>
