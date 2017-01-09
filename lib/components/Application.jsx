@@ -55,13 +55,17 @@ class Application extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentWillReceiveProps() {
+    console.log('component did mount: ' + this.props.pathname);
     this.setState({
-      filter: this.props.pathname.slice(1) });
+      filter: this.props.pathname.slice(1),
+    });
   }
 
   render() {
-    const filteredPhotos = this.filterPhotos();
+    console.log(this.props.pathname);
+    const filteredPhotos = this.filterPhotos()
+    console.log('filtered image on render: ' + filteredPhotos[this.state.currentImage]);
     return (
       <div>
         <Header />

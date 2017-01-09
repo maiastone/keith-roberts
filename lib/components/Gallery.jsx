@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
+import { Link } from 'react-router';
 
 const masonryOptions = {
   transitionDuration: 1,
@@ -32,7 +33,7 @@ class Gallery extends React.Component {
               id='gallery' className='filters'
               onClick={() => this.props.updateFilter('featured')}
             >
-            All Work
+            Featured
             </button>
 
             <button
