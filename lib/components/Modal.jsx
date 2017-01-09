@@ -16,7 +16,6 @@ class Modal extends React.Component {
         background: 'white',
         boxShadow: '0 0 12px 0 rgba(0,0,0,.2)',
         width: '100%',
-      
         zIndex: '9999',
       },
       modalIsClosed: {

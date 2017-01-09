@@ -10,14 +10,14 @@ class Gallery extends React.Component {
 
   createPhotoList(toggle) {
     if (this.props.filtered) {
-      return this.props.filtered.map(function (photo) {
+      return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
             key={photo.id}>
               <img
                 className='modal-content'
                 src={photo.imgLink}
-                onClick={(e) => toggle(e, photo.id)}
+                onClick={(e) => toggle(e, index)}
               />
           </li>
         );

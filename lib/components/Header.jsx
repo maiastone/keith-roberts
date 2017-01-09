@@ -42,7 +42,8 @@ class Header extends React.Component {
                   Undersea
                   </button>
 
-                  <button onClick={() => this.openNav()}>Menu</button>
+                  <button onClick={() => this.openNav()}>Menu
+                  </button>
                 </div>
 
               <div id='theNav' className='overlay'>

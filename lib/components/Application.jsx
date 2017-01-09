@@ -18,8 +18,8 @@ class Application extends React.Component {
 
   toggleModal(e, index) {
     this.setState({
-      modalIsOpen: !this.state.modalIsOpen,
       currentImage: index,
+      modalIsOpen: !this.state.modalIsOpen,
     });
   }
 
@@ -51,7 +51,7 @@ class Application extends React.Component {
   unfilterPhotos() {
     this.setState({
       filtered: photos,
-    })
+    });
   }
 
   render() {

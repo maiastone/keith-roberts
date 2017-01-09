@@ -12,9 +12,9 @@ describe('Header', () => {
     const wrapper = shallow(<Header />);
     expect(wrapper.find('h1').length, 1);
   });
-  it('renders 3 <button> tags', () => {
-    const wrapper = shallow(<Header />);
-    expect(wrapper.find('button').length, 3);
+  it('renders 4 <button> tags', () => {
+    const wrapper = mount(<Header />);
+    expect(wrapper.find('button').length, 4);
   });
   it.skip('should change the state of filtered onClick of the fine-art button', () => {
     const wrapper = shallow(<Header />);
