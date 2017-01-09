@@ -67,6 +67,9 @@ button {
 }
 .arrows {
   margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: $highlight-color;
 }
 .filters {
   display: none;
@@ -99,6 +102,7 @@ button {
   width: 100%;
   background-color: #F0F0F0;
   opacity: .9;
+  height: 10%;
 }
 
 .left-side-header {
@@ -148,6 +152,17 @@ button {
     font-size: 16px;
     line-height: 1.5em;
   }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#modal-div {
+  height: 100%;
+  margin-top: 0;
+
 }
 
 /*media queries*/
@@ -231,10 +246,7 @@ button {
     line-height: 1.5em;
   }
 }
-  #modal-div {
-    margin-top: 14%;
-    height: 88%;
-  }
+
 }
 button {
   width: 75px;
@@ -251,6 +263,9 @@ button {
   }
   .photo-list {
     width: 300px;
+  }
+  h1 {
+    font-size: 44px;
   }
 }
 

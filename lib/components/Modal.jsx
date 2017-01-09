@@ -7,17 +7,16 @@ class Modal extends React.Component {
       modalIsOpen: {
         transform: 'translate Y(0%)',
         transition: 'all 1s ease',
-        position: 'fixed', /* Stay in place */
+        position: 'fixed',
         left: '0',
         top: '0',
         padding: '2rem',
-        marginTop: '14%', /* Location of the box */
-        overflow: 'auto', /* Enable scroll if needed */
-        backgroundColor: 'rgba(0,0,0,0.9)', /* Black w/ opacity */
+        overflow: 'auto',
+        backgroundColor: 'rgba(0,0,0,0.9)',
         background: 'white',
         boxShadow: '0 0 12px 0 rgba(0,0,0,.2)',
         width: '100%',
-        height: '88%',
+      
         zIndex: '9999',
       },
       modalIsClosed: {
