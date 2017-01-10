@@ -25,14 +25,16 @@ class Application extends React.Component {
   }
 
   clickPrev() {
+    let { currentImage, filtered } = this.state;
     this.setState({
-      currentImage: this.state.currentImage - 1,
+      currentImage: filtered[currentImage - 1] ? currentImage - 1 : filtered.length - 1
     });
   }
 
   clickNext() {
+    let { currentImage, filtered } = this.state;
     this.setState({
-      currentImage: this.state.currentImage + 1,
+      currentImage: filtered[currentImage + 1] ? currentImage + 1 : 0,
     });
   }
 

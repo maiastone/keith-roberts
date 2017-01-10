@@ -1,0 +1,91 @@
+@media screen and (min-width: 400px) {
+  .about-container {
+    margin-top: 25%;
+  }
+}
+
+@media screen and (min-width: 618px) {
+  ul {
+    margin-left: 8%;
+  }
+  .about-container {
+    margin-top: 25%;
+  }
+  .button-container {
+    padding-top: 5%;
+  }
+}
+
+@media screen and (min-width: 719px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    margin-left: 320px;
+    margin-right: 10px;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  ul {
+    margin-left: 14%;
+    transition: left 1.25s;
+  }
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  .gallery-container {
+    margin-top: 8%;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .closebtn {
+    position: absolute;
+    top: .4em;
+    right: 5.5%;
+    font-size: 5em;
+  }
+  .close {
+    top: 10px;
+  }
+  .about-container {
+    margin-top: 15%;
+  }
+  .about-content {
+  box-shadow: 1px 1px 5px #e0e0e0;
+  height: 350px;
+  width: 80%;
+  margin: auto;
+  img {
+    float: left;
+    padding: 20px;
+  }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  ul {
+    margin-left: 5%;
+  }
+  h1 {
+    font-size: 44px;
+  }
+  .button-container {
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

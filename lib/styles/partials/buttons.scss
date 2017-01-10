@@ -1,0 +1,29 @@
+button {
+  width: 100px;
+  height: 44px;
+  border-style: none;
+  background-color: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  outline: none;
+  &:hover {
+    background-color: #ffffff;
+    outline: none;
+  }
+}
+
+.filters {
+  display: inline-block;
+  margin: 1%;
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+.arrows {
+  margin-top: 10px;
+  font-size: 60px;
+  color: $highlight-color;
+}
