@@ -56,7 +56,7 @@ class Application extends React.Component {
   }
 
   componentWillReceiveProps() {
-    console.log('component did mount: ' + this.props.pathname);
+    console.log('component willreceiveprops: ' + this.props.pathname);
     this.setState({
       filter: this.props.pathname.slice(1),
     });
@@ -68,7 +68,9 @@ class Application extends React.Component {
     console.log('filtered image on render: ' + filteredPhotos[this.state.currentImage]);
     return (
       <div>
-        <Header />
+        <Header
+          updateFilter={this.updateFilter.bind(this)}
+          />
 
         <main>
           <div className='modal-container'>

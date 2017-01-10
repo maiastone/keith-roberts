@@ -34,8 +34,8 @@ class Header extends React.Component {
                 <div className='overlay-content'>
                   <Link to='/'>Featured</Link>
                   <Link to='/about'>About</Link>
-                  <Link to='/fine-art' className='mobile-nav'>Fine Art</Link>
-                  <Link to='/undersea' className='mobile-nav'>Undersea</Link>
+                  <Link to='/fine-art'>Fine Art</Link>
+                  <Link to='/undersea'>Undersea</Link>
                 </div>
               </div>
 
