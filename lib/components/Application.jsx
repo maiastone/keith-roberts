@@ -62,7 +62,7 @@ class Application extends React.Component {
   }
 
   render() {
-    const filteredPhotos = this.filterPhotos();
+    const filteredPhotos = this.state.filter ? this.filterPhotos() : photos;
     return (
       <div>
         <Header

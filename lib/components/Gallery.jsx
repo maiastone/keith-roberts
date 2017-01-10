@@ -29,25 +29,25 @@ class Gallery extends React.Component {
     return (
         <div className='gallery-container'>
           <div className='button-container'>
-            <button
+
+            <Link to='/'
               id='gallery' className='filters'
               onClick={() => this.props.updateFilter('featured')}
             >
             Featured
-            </button>
+            </Link>
 
-            <button
+            <Link to='/fine-art'
               id='fine-art' className='filters'
-              onClick={() => this.props.updateFilter('fine-art')}
             >
             Fine Art
-            </button>
+            </Link>
 
-            <button className='filters'
+            <Link to='/undersea' className='filters'
               onClick={() => this.props.updateFilter('undersea')}
             >
             Undersea
-            </button>
+            </Link>
           </div>
 
             <Masonry
