@@ -13,7 +13,7 @@ class Gallery extends React.Component {
       return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
-            key={photo.id}>
+            key={index}>
               <img
                 className='modal-content'
                 src={photo.imgLink}

@@ -1,0 +1,46 @@
+@mixin grid($cols, $mgn) {
+  float: left;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols );
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
+
+li {
+  @include grid(2, 1%);
+  list-style: none;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.photo-list {
+  width: 400px;
+  transition: left 1.25s;
+}
+
+/*image rendered in color, black and white on hover*/
+img {
+  -webkit-filter: grayscale(0%);
+  z-index: -99px;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+img:hover {
+  -webkit-filter: grayscale(75%);
+  opacity: .85;
+  box-shadow: 2px 2px 6px #e0e0e0;
+  z-index: -99px;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}

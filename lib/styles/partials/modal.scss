@@ -2,6 +2,9 @@
 .modal-container {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -56,4 +59,9 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 5px;
+}
+
+#modal-div {
+  height: 100%;
+  margin-top: 0;
 }

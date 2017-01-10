@@ -25,14 +25,16 @@ class Application extends React.Component {
   }
 
   clickPrev() {
+    let { currentImage, filtered } = this.state;
     this.setState({
-      currentImage: this.state.currentImage - 1,
+      currentImage: filtered[currentImage - 1] ? currentImage - 1 : filtered.length - 1
     });
   }
 
   clickNext() {
+    let { currentImage, filtered } = this.state;
     this.setState({
-      currentImage: this.state.currentImage + 1,
+      currentImage: filtered[currentImage + 1] ? currentImage + 1 : 0,
     });
   }
 
@@ -85,16 +87,18 @@ class Application extends React.Component {
                 } }
               >
               </section>
-              <button
-                className='arrows'
-                onClick={() => this.clickPrev()}
-              > {'<'}
-              </button>
-              <button
-                className='arrows'
-                onClick={() => this.clickNext()}
-              > >
-              </button>
+              <div className='arrow-container'>
+                <button
+                  className='arrows'
+                  onClick={() => this.clickPrev()}
+                > {'<'}
+                </button>
+                <button
+                  className='arrows'
+                  onClick={() => this.clickNext()}
+                > >
+                </button>
+              </div>
             </Modal>
           </div>
 
