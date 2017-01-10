@@ -55,7 +55,7 @@ class Application extends React.Component {
     }
   }
 
-  componentWillReceiveProps() {
+  componentDidMount() {
     this.setState({
       filter: this.props.pathname.slice(1),
     });
