@@ -56,16 +56,13 @@ class Application extends React.Component {
   }
 
   componentWillReceiveProps() {
-    console.log('component willreceiveprops: ' + this.props.pathname);
     this.setState({
       filter: this.props.pathname.slice(1),
     });
   }
 
   render() {
-    console.log(this.props.pathname);
-    const filteredPhotos = this.filterPhotos()
-    console.log('filtered image on render: ' + filteredPhotos[this.state.currentImage]);
+    const filteredPhotos = this.filterPhotos();
     return (
       <div>
         <Header

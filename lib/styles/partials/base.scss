@@ -64,14 +64,16 @@ button {
     background-color: #ffffff;
   }
 }
+
+.filters {
+  margin: 1%;
+}
+
 .arrows {
   margin-top: 10px;
   font-size: 22px;
   font-weight: bold;
   color: $highlight-color;
-}
-.filters {
-
 }
 
 .logo {
@@ -112,13 +114,13 @@ button {
     width: 60px;
   }
 }
+
 .button-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  padding: 2%;
-  margin: 1%;
-
+  margin-top: 15%;
+  margin-bottom: 5%;
 }
 
 .gallery-container {
@@ -146,6 +148,7 @@ button {
   width: 100%;
   margin-top: 30%;
 }
+
 .about-content {
   box-shadow: 1px 1px 5px #e0e0e0;
   height: 90%;
@@ -166,6 +169,7 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
 #modal-div {
   height: 100%;
   margin-top: 0;
@@ -183,14 +187,18 @@ main {
 }
 
 @media screen and (min-width: 618px) {
-  .about-container {
-    margin-top: 25%;
-  }
   ul {
     margin-left: 8%;
   }
+  .about-container {
+    margin-top: 25%;
+  }
   .photo-list {
     width: 250px;
+  }
+  .button-container {
+    justify-content: space-around;
+    margin-top: 7%;
   }
 }
 
@@ -198,26 +206,38 @@ main {
   h1 {
     font-size: 30px;
   }
+  p {
+    margin-left: 320px;
+    margin-right: 10px;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  button {
+    width: 100px;
+    font-size: 12px;
+  }
   ul {
     margin-left: 15%;
     transition: left 0.5s;
+  }
+  li {
+    @include grid(3, 1%);
   }
   .navBar {
     display: flex;
     justify-content: space-between;
     width: 25%;
   }
-  li {
-    @include grid(3, 1%);
-  }
   .photo-list {
     width: 250px;
   }
-  .mobile-nav {
-    display: none;
-  }
   .gallery-container {
     margin-top: 8%;
+  }
+  .button-container {
+    justify-content: flex-end;
+    margin: 5% 5% 0 0;
   }
   .filters {
     display: inline-block;
@@ -252,19 +272,7 @@ main {
     float: left;
     padding: 20px;
   }
-  p {
-    margin-left: 320px;
-    margin-right: 10px;
-    padding-top: 20px;
-    font-size: 18px;
-    line-height: 1.5em;
   }
-}
-
-}
-button {
-  width: 100px;
-  font-size: 12px;
 }
 
 @media screen and (min-width: 900px) {
@@ -280,6 +288,9 @@ button {
   }
   h1 {
     font-size: 44px;
+  }
+  .button-container {
+    margin-top: 2%;
   }
 }
 
