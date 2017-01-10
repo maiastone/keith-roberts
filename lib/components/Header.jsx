@@ -19,7 +19,7 @@ class Header extends React.Component {
             <nav className='header-container'>
                 <div className='left-side-header'>
                   <img className='logo' src='./lib/styles/images/logo.png'/>
-                  <h1>Keith Roberts <span>Photography</span></h1>
+                  <h1>Keith Roberts</h1>
                 </div>
                 <div className='right-side-header'>
 
@@ -34,7 +34,7 @@ class Header extends React.Component {
                 <div className='overlay-content'>
                   <Link to='/'>Featured</Link>
                   <Link to='/about'>About</Link>
-      
+
                 </div>
               </div>
 

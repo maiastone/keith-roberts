@@ -85,16 +85,18 @@ class Application extends React.Component {
                 } }
               >
               </section>
-              <button
-                className='arrows'
-                onClick={() => this.clickPrev()}
-              > {'<'}
-              </button>
-              <button
-                className='arrows'
-                onClick={() => this.clickNext()}
-              > >
-              </button>
+              <div className='arrow-container'>
+                <button
+                  className='arrows'
+                  onClick={() => this.clickPrev()}
+                > {'<'}
+                </button>
+                <button
+                  className='arrows'
+                  onClick={() => this.clickNext()}
+                > >
+                </button>
+              </div>
             </Modal>
           </div>
 
