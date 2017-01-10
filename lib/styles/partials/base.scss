@@ -51,7 +51,7 @@ li {
 
 button {
   width: 100px;
-  height: 40px;
+  height: 44px;
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid $highlight-color;
@@ -82,7 +82,7 @@ button {
 
 .photo-list {
   width: 100%;
-  transition: left 0.5s;
+  transition: left 1s;
 }
 
 /*containers*/
@@ -158,7 +158,7 @@ button {
     padding: 15px;
   }
   p {
-    padding: 0px 20px 20px 20px;
+    padding: 20px;
     font-size: 16px;
     line-height: 1.5em;
   }
@@ -197,7 +197,6 @@ main {
     width: 250px;
   }
   .button-container {
-    justify-content: space-around;
     margin-top: 7%;
   }
 }
@@ -219,7 +218,7 @@ main {
   }
   ul {
     margin-left: 15%;
-    transition: left 0.5s;
+    transition: left 1s;
   }
   li {
     @include grid(3, 1%);
@@ -306,7 +305,9 @@ img {
 }
 
 img:hover {
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(90%);
+  opacity: .9;
+  box-shadow: 2px 2px 6px #e0e0e0;
   z-index: -99px;
   -webkit-transition: all 0.9s ease-in-out;
   -moz-transition: all 0.9s ease-in-out;
