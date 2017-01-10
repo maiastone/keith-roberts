@@ -28,8 +28,8 @@ class Gallery extends React.Component {
   render() {
     return (
         <div className='gallery-container'>
-          <div className='button-container'>
 
+          <div className='button-container'>
             <Link to='/'
               id='gallery' className='filters'
               onClick={() => this.props.updateFilter('featured')}
@@ -50,14 +50,14 @@ class Gallery extends React.Component {
             </Link>
           </div>
 
-            <Masonry
-              elementType={'ul'}
-              options={masonryOptions}
-              disableImagesLoaded={false}
-              updateOnEachImageLoad={false}
-            >
-              {this.createPhotoList(this.props.toggleModal)}
-            </Masonry>
+          <Masonry
+            elementType={'ul'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false}
+          >
+            {this.createPhotoList(this.props.toggleModal)}
+          </Masonry>
         </div>
     );
   }

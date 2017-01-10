@@ -23,21 +23,26 @@ class Header extends React.Component {
                 </div>
                 <div className='right-side-header'>
 
-                  <button onClick={() => this.openNav()}>Menu
+                  <button
+                    onClick={() => this.openNav()}
+                  >
+                  Menu
                   </button>
                 </div>
 
-              <div id='theNav' className='overlay'>
-                <a href="javascript:void(0)"
-                  className="closebtn" onClick={() => this.closeNav()}
-                  >&times;</a>
-                <div className='overlay-content'>
-                  <Link to='/'>Featured</Link>
-                  <Link to='/about'>About</Link>
-                  <Link to='/fine-art'>Fine Art</Link>
-                  <Link to='/undersea'>Undersea</Link>
-
-                </div>
+                <div id='theNav' className='overlay'>
+                  <a href="javascript:void(0)"
+                    className="closebtn"
+                    onClick={() => this.closeNav()}
+                  >
+                    &times;
+                  </a>
+                  <div className='overlay-content'>
+                    <Link to='/'>Featured</Link>
+                    <Link to='/about'>About</Link>
+                    <Link to='/fine-art'>Fine Art</Link>
+                    <Link to='/undersea'>Undersea</Link>
+                  </div>
               </div>
 
             </nav>
