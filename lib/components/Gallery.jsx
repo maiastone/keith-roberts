@@ -1,21 +1,64 @@
 import React, { Component } from 'react';
-import photos from '../photos.js'
+import Masonry from 'react-masonry-component';
+import photos from '../photos.js';
+import { Link } from 'react-router';
+
+const masonryOptions = {
+  transitionDuration: 1,
+};
 
 class Gallery extends React.Component {
 
+  createPhotoList(toggle) {
+      return this.props.filtered.map(function (photo, index) {
+        return (
+          <li className='photo-list'
+            key={index}>
+              <img
+                className='modal-content'
+                src={photo.imgLink}
+                onClick={(e) => toggle(e, index)}
+              />
+          </li>
+        );
+      });
+  }
+
 
   render() {
-    const imgCard = photos.map((photo) =>
-      <div className ='imgCard' key={photo.id}>
-        <h1>{photo.title}</h1>
-        <img className='photo' src={photo.imgLink}></img>
-      </div>
-      );
-
     return (
-      <div>
-        {imgCard}
-      </div>
+        <div className='gallery-container'>
+          <div className='button-container'>
+
+            <Link to='/'
+              id='gallery' className='filters'
+              onClick={() => this.props.updateFilter('featured')}
+            >
+            Featured
+            </Link>
+
+            <Link to='/fine-art'
+              id='fine-art' className='filters'
+            >
+            Fine Art
+            </Link>
+
+            <Link to='/undersea' className='filters'
+              onClick={() => this.props.updateFilter('undersea')}
+            >
+            Undersea
+            </Link>
+          </div>
+
+            <Masonry
+              elementType={'ul'}
+              options={masonryOptions}
+              disableImagesLoaded={false}
+              updateOnEachImageLoad={false}
+            >
+              {this.createPhotoList(this.props.toggleModal)}
+            </Masonry>
+        </div>
     );
   }
 }

@@ -1,23 +1,22 @@
 {
-  "name": "react-starter-kit",
-  "version": "1.0.0",
-  "description": "A good enough starter kit for a React project, I guess.",
+  "name": "Keith-Roberts-Photography",
+  "description": "A site for fine art and commerical photography",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
     "build": "webpack.js",
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turingschool-examples/react-starter-kit.git"
+    "url": ""
   },
-  "author": "Steve Kinney",
+  "author": "Maia Stone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingschool-examples/react-starter-kit/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/turingschool-examples/react-starter-kit",
+  "homepage": "",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.4",
@@ -29,20 +28,28 @@
     "babel-register": "^6.7.2",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.7.0",
     "eslint": "^2.6.0",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.0",
     "eslint-plugin-jsx-a11y": "^1.2.2",
     "eslint-plugin-react": "^5.1.1",
+    "jsdom": "^9.5.0",
     "mocha": "^2.4.5",
     "mocha-loader": "^0.7.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.4.2",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "imagesloaded": "^4.1.1",
+    "react-masonry-component": "^5.0.0",
+    "react-router": "^4.0.0-alpha.6"
   }
 }

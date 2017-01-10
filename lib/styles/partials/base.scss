@@ -1,3 +1,54 @@
-.photo {
-  width: 500px;
+@import './variables.scss';
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+a {
+  transition-duration: .5s;
+  padding: 2%;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  padding-right: 10px;
+}
+
+.about-content {
+  box-shadow: 1px 1px 5px #e0e0e0;
+  height: 90%;
+  width: 80%;
+  margin: auto;
+  img {
+    padding: 15px;
+  }
+  p {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
 }
