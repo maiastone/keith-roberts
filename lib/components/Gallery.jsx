@@ -53,8 +53,6 @@ class Gallery extends React.Component {
           <Masonry
             elementType={'ul'}
             options={masonryOptions}
-            disableImagesLoaded={false}
-            updateOnEachImageLoad={false}
           >
             {this.createPhotoList(this.props.toggleModal)}
           </Masonry>
