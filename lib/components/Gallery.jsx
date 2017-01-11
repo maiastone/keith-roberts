@@ -31,21 +31,16 @@ class Gallery extends React.Component {
 
           <div className='button-container'>
             <Link to='/'
-              id='gallery' className='filters'
-              onClick={() => this.props.updateFilter('featured')}
-            >
+              id='gallery' className='filters'>
             Featured
             </Link>
 
             <Link to='/fine-art'
-              id='fine-art' className='filters'
-            >
+              id='fine-art' className='filters'>
             Fine Art
             </Link>
 
-            <Link to='/undersea' className='filters'
-              onClick={() => this.props.updateFilter('undersea')}
-            >
+            <Link to='/undersea' className='filters'>
             Undersea
             </Link>
           </div>

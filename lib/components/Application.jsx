@@ -17,6 +17,13 @@ class Application extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      filter: this.props.pathname,
+      filtered: this.filterPhotos(this.props.pathname),
+    });
+  }
+
   toggleModal(e, index) {
     this.setState({
       currentImage: index,
@@ -24,10 +31,24 @@ class Application extends React.Component {
     });
   }
 
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+  }
+
+  filterPhotos(filter) {
+    if (filter === 'featured' || filter === '') {
+      return photos;
+    } else {
+      return photos.filter(function (photo) {
+        return photo.category === filter;
+      });
+    }
+  }
+
   clickPrev() {
     const { currentImage, filtered } = this.state;
     this.setState({
-      currentImage: filtered[currentImage - 1] ? currentImage - 1 : filtered.length - 1
+      currentImage: filtered[currentImage - 1] ? currentImage - 1 : filtered.length - 1,
     });
   }
 
@@ -38,38 +59,10 @@ class Application extends React.Component {
     });
   }
 
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-  }
-
-  updateFilter(filter) {
-    this.setState({ filter });
-  }
-
-  filterPhotos() {
-    const currentFilter = this.state.filter;
-    if (currentFilter === 'featured') {
-      return photos;
-    } else {
-      return photos.filter(function (photo) {
-        return (photo.category === currentFilter);
-      });
-    }
-  }
-
-  componentDidMount() {
-    this.setState({
-      filter: this.props.pathname.slice(1),
-    });
-  }
-
   render() {
-    const filteredPhotos = this.state.filter ? this.filterPhotos() : photos;
     return (
       <div>
-        <Header
-          updateFilter={this.updateFilter.bind(this)}
-          />
+        <Header />
 
         <main>
           <div className='modal-container'>
@@ -83,7 +76,7 @@ class Application extends React.Component {
               <section
                 className='modal-image-div'
                 style={ {
-                  backgroundImage: 'url(' + filteredPhotos[this.state.currentImage].imgLink + ')',
+                  backgroundImage: 'url(' + this.state.filtered[this.state.currentImage].imgLink + ')',
                 } }
               >
               </section>
@@ -103,9 +96,8 @@ class Application extends React.Component {
           </div>
 
           <Gallery
-            updateFilter={this.updateFilter.bind(this)}
             toggleModal={(e, index) => this.toggleModal(e, index)}
-            filtered={filteredPhotos}
+            filtered={this.state.filtered}
             currentImage={this.state.currentImage}
           />
         </main>
