@@ -43,16 +43,15 @@ describe('Application', () => {
     const wrapper = shallow(<Application />);
     expect(wrapper.find(<Footer />).length, 1);
   });
-  it.skip('should call componentDidMount', () => {
+  it('should call componentDidMount', () => {
     sinon.spy(Application.prototype, 'componentDidMount');
     const wrapper = mount(<MemoryRouter><Application /></MemoryRouter>);
     expect(Application.prototype.componentDidMount).to.have.property('callCount', 1);
     Application.prototype.componentDidMount.restore();
   });
   it.skip('should open the modal when an image is clicked', () => {
-    const wrapper = mount(<MemoryRouter><Application
-      photos={photos}/></MemoryRouter>);
-      wrapper.find('#1').simulate('click');
-      assert.equal(wrapper.state('modalIsOpen'),(true));
+    const wrapper = mount(<MemoryRouter><Application photos={photos}/></MemoryRouter>);
+    wrapper.find('modal-content').simulate('click');
+    assert.equal(wrapper.state('modalIsOpen'), (true));
   });
 });

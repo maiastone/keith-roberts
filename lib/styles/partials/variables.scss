@@ -2,3 +2,12 @@ $highlight-color: #F79122;
 $full: 100%;
 $header-footer-color: #F0F0F0;
 $lightgray: #e0e0e0;
+
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
