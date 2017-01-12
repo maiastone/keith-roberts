@@ -4,7 +4,7 @@ A clean and smooth photography website, built with React, React-Router, JavaScri
 
 ## Project Screen Shot   
 
-![](./screenshot.png)git st
+![](http://recordit.co/BaUjP3iSww)
 
 ## Installation and Setup Instructions
 
