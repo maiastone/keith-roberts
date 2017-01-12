@@ -10,6 +10,7 @@ const masonryOptions = {
 class Gallery extends React.Component {
 
   createPhotoList(toggle) {
+    if (this.props.filtered) {
       return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
@@ -22,6 +23,7 @@ class Gallery extends React.Component {
           </li>
         );
       });
+    }
   }
 
 

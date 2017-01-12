@@ -17,20 +17,20 @@ describe('Gallery', () => {
     expect(wrapper.find(<Masonry />).length, 1);
   });
   it('should have the toggleModal function as props', () => {
-    const wrapper = mount(<Gallery
+    const wrapper = shallow(<Gallery
       toggleModal={(e, index) => this.toggleModal(e, index)} />);
     assert.isObject(wrapper.props('toggleModal'));
   });
   it('should receive the state of filtered as props', () => {
-    const wrapper = mount(<Gallery filtered={photos} />);
+    const wrapper = shallow(<Gallery filtered={photos} />);
     assert.isObject(wrapper.props('filtered'));
   });
   it('should hold an array of photos', () => {
-    const wrapper = mount(<Gallery filtered={photos} />);
+    const wrapper = shallow(<Gallery filtered={photos} />);
     expect(photos.length).to.equal(4);
   });
   it('should render a ul', () => {
-    const wrapper = mount(<Gallery />);
+    const wrapper = shallow(<Gallery />);
     expect(wrapper.find('ul').length, 1);
   });
 });
