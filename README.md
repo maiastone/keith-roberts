@@ -2,9 +2,7 @@
 
 A clean and smooth photography website, built with React, React-Router, JavaScript, and Sass.   
 
-## Project Screen Shot   
-
-![](http://recordit.co/BaUjP3iSww)
+![](http://g.recordit.co/BaUjP3iSww.gif)
 
 ## Installation and Setup Instructions
 
