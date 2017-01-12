@@ -29,6 +29,7 @@ class Application extends React.Component {
       currentImage: index,
       modalIsOpen: !this.state.modalIsOpen,
     });
+    debugger;
   }
 
   closeModal() {
@@ -60,6 +61,7 @@ class Application extends React.Component {
   }
 
   render() {
+    const imageURL = this.state.filtered[this.state.currentImage].imgLink
     return (
       <div>
         <Header />
@@ -76,7 +78,7 @@ class Application extends React.Component {
               <section
                 className='modal-image-div'
                 style={ {
-                  backgroundImage: 'url(' + this.state.filtered[this.state.currentImage].imgLink + ')',
+                  backgroundImage: `url(${imageURL})`,
                 } }
               >
               </section>
