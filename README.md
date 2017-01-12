@@ -2,12 +2,9 @@
 
 A clean and smooth photography website, built with React, React-Router, JavaScript, and Sass.   
 
+## Project Screen Shot   
 
-## Project Screen Shot(s)   
-
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+![]( './ScreenShot.png' )
 
 ## Installation and Setup Instructions
 
