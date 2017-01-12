@@ -16,9 +16,4 @@ describe('Header', () => {
     const wrapper = shallow(<Header />);
     expect(wrapper.find('button').length, 1);
   });
-  it.skip('should change the state of filtered onClick of the fine-art button', () => {
-    const wrapper = shallow(<Header />);
-    wrapper.find('#fine-art').simulate('click');
-    assert.equal(photos.length).to.be(2);
-  });
 });

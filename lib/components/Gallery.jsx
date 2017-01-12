@@ -3,6 +3,7 @@ import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
 import { Link } from 'react-router';
 
+
 const masonryOptions = {
   transitionDuration: 1,
 };
@@ -14,6 +15,7 @@ class Gallery extends React.Component {
       return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
+            id='test-click'
             key={index}>
               <img
                 className='modal-content'
