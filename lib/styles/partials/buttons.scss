@@ -1,9 +1,11 @@
 button {
+  border: .5px solid lightgray;
+  border-radius: 5px;
   width: 100px;
   height: 44px;
   border-style: none;
   background-color: transparent;
-  font-size: 1.2em;
+  font-size: 14px;
   text-transform: uppercase;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;

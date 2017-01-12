@@ -38,7 +38,7 @@ class Header extends React.Component {
                     &times;
                   </a>
                   <div className='overlay-content'>
-                    <Link to='/'>Featured</Link>
+                    <Link to='/featured'>Featured</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/fine-art'>Fine Art</Link>
                     <Link to='/undersea'>Undersea</Link>

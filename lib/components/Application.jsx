@@ -29,7 +29,6 @@ class Application extends React.Component {
       currentImage: index,
       modalIsOpen: !this.state.modalIsOpen,
     });
-    debugger;
   }
 
   closeModal() {
@@ -61,7 +60,7 @@ class Application extends React.Component {
   }
 
   render() {
-    const imageURL = this.state.filtered[this.state.currentImage].imgLink
+    const imageURL = this.state.filtered[this.state.currentImage].imgLink;
     return (
       <div>
         <Header />
