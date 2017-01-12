@@ -13,7 +13,7 @@
   top: 0;
   z-index: 999;
   width: $full;
-  background-color: #F0F0F0;
+  background-color: $header-footer-color;
   opacity: .9;
   height: 10%;
 }
@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   width: $full;
-  margin-top: 20%;
+  margin-top: 13%;
 }
 
 .arrow-container {
@@ -41,7 +41,7 @@
 
 .footer-container {
   z-index: 999;
-  background-color: #F0F0F0;
+  background-color: $header-footer-color;
   position: fixed;
   bottom: 0px;
   height: 5%;

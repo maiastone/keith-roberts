@@ -6,7 +6,7 @@ class Modal extends React.Component {
     const styles = {
       modalIsOpen: {
         transform: 'translate Y(0%)',
-        transition: 'all 1s ease',
+        transition: 'all 2s ease',
         position: 'fixed',
         left: '0',
         top: '0',
@@ -21,7 +21,7 @@ class Modal extends React.Component {
       modalIsClosed: {
         display: 'none',
         transform: 'translate Y(-100%)',
-        transition: 'all 1s ease',
+        transition: 'all 2s ease',
       },
     };
 

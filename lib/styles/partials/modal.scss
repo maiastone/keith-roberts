@@ -6,11 +6,21 @@
   flex-direction: row;
 }
 
-.modal-content {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.8s;
-    animation-name: zoom;
-    animation-duration: 0.8s;
+.modal-image-div {
+  height: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 5px;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: .8s;
+  animation-name: zoom;
+  animation-duration: .8s;
+}
+
+#modal-div {
+  height: 100%;
+  margin-top: 0;
 }
 
 @-webkit-keyframes zoom {
@@ -25,7 +35,7 @@
 
 .close {
   position: absolute;
-  top: 50px;
+  top: 17px;
   right: 5px;
   transition: 0.3s;
   z-index: 9999999;
@@ -48,17 +58,4 @@
     .modal-content {
         width: 100%;
     }
-}
-
-.modal-image-div {
-  height: 90%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 5px;
-}
-
-#modal-div {
-  height: 100%;
-  margin-top: 0;
 }

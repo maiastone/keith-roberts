@@ -3,6 +3,7 @@ import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
 import { Link } from 'react-router';
 
+
 const masonryOptions = {
   transitionDuration: 1,
 };
@@ -10,9 +11,11 @@ const masonryOptions = {
 class Gallery extends React.Component {
 
   createPhotoList(toggle) {
+    if (this.props.filtered) {
       return this.props.filtered.map(function (photo, index) {
         return (
           <li className='photo-list'
+            id='test-click'
             key={index}>
               <img
                 className='modal-content'
@@ -22,6 +25,7 @@ class Gallery extends React.Component {
           </li>
         );
       });
+    }
   }
 
 
@@ -31,21 +35,16 @@ class Gallery extends React.Component {
 
           <div className='button-container'>
             <Link to='/'
-              id='gallery' className='filters'
-              onClick={() => this.props.updateFilter('featured')}
-            >
+              id='gallery' className='filters'>
             Featured
             </Link>
 
             <Link to='/fine-art'
-              id='fine-art' className='filters'
-            >
+              id='fine-art' className='filters'>
             Fine Art
             </Link>
 
-            <Link to='/undersea' className='filters'
-              onClick={() => this.props.updateFilter('undersea')}
-            >
+            <Link to='/undersea' className='filters'>
             Undersea
             </Link>
           </div>

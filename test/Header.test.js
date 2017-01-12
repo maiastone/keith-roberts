@@ -12,13 +12,8 @@ describe('Header', () => {
     const wrapper = shallow(<Header />);
     expect(wrapper.find('h1').length, 1);
   });
-  it('renders 4 <button> tags', () => {
-    const wrapper = mount(<Header />);
-    expect(wrapper.find('button').length, 4);
-  });
-  it.skip('should change the state of filtered onClick of the fine-art button', () => {
+  it('renders 1 <button> tag', () => {
     const wrapper = shallow(<Header />);
-    wrapper.find('#fine-art').simulate('click');
-    assert.equal(photos.length).to.be(2);
+    expect(wrapper.find('button').length, 1);
   });
 });
