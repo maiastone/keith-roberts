@@ -42,8 +42,11 @@
     justify-content: space-between;
     width: 25%;
   }
+  #modal-div {
+    margin-top: 5%;
+  }
   .modal-image-div {
-    margin-top: 20%;
+    margin-top: 25%;
   }
   .header-container {
     @include flexbox;
@@ -54,9 +57,6 @@
     top: .4em;
     right: 5.5%;
     font-size: 5em;
-  }
-  .close {
-    top: 120px;
   }
   .about-container {
     margin-top: 15%;
