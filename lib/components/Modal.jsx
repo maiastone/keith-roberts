@@ -10,7 +10,6 @@ class Modal extends React.Component {
         position: 'fixed',
         left: '0',
         top: '0',
-        padding: '2rem',
         overflow: 'auto',
         backgroundColor: 'rgba(0,0,0,0.9)',
         background: 'white',
