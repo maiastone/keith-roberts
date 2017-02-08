@@ -7,11 +7,11 @@
 }
 
 .modal-image-div {
-  height: 90%;
+  height: 60%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 5px;
+  margin-top: 25%;
   -webkit-animation-name: zoom;
   -webkit-animation-duration: .8s;
   animation-name: zoom;
@@ -35,13 +35,13 @@
 
 .close {
   position: absolute;
-  top: 17px;
-  right: 5px;
+  top: 100px;
+  right: -15px;
   transition: 0.3s;
   z-index: 9999999;
   border: none;
   color: $highlight-color;
-  font-size: 3em;
+  font-size: 2em;
   outline: none;
 }
 

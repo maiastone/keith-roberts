@@ -27,7 +27,7 @@ Once the server is running, you can visit:
 
 ## Reflection
 
-This was a 3 week long project built during my third module at Turing School of Software and Design. I wanted to    focus on a more visual and creative project, and found the opportunity to build this site photography website.  Project goals included creating a beautiful and smooth responsive design to captivate the user and keep them on the site.  The photographer client wanted a site to showcase his work, and get new clients for either fine art or commercial work.  He wanted lots of big images, little text, filtering capability, and plenty of whitespace.   
+This was a 3 week long project built during my third module at Turing School of Software and Design. I wanted to focus on a more visual and creative project, and found the opportunity to build this site photography website.  Project goals included creating a beautiful and smooth responsive design to captivate the user and keep them on the site.  The photographer client wanted a site to showcase his work, and get new clients for either fine art or commercial work.  He wanted lots of big images, little text, filtering capability, and plenty of whitespace.   
 
 My initial research spike including looking at trends in photography websites, and how to best deal with image handling and loading.  I create several wireframes in sketch to share with the client, and decided on a direction.   
 

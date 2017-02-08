@@ -29,9 +29,10 @@
 
 .button-container {
   @include flexbox;
-  justify-content: center;
+  justify-content: flex-start;
   width: $full;
   margin-top: 13%;
+  margin-left: 60px;
 }
 
 .arrow-container {

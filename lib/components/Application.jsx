@@ -3,6 +3,7 @@ import Gallery from './Gallery.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import Modal from './Modal.jsx';
+import ModalHeader from './ModalHeader.jsx';
 import photos from '../photos.js';
 
 
@@ -38,11 +39,10 @@ class Application extends React.Component {
   filterPhotos(filter) {
     if (filter === 'featured' || filter === '') {
       return photos;
-    } else {
-      return photos.filter(function (photo) {
-        return photo.category === filter;
-      });
     }
+    return photos.filter(function (photo) {
+      return photo.category === filter;
+    });
   }
 
   clickPrev() {
@@ -69,6 +69,7 @@ class Application extends React.Component {
           <div className='modal-container'>
             <Modal
               open={this.state.modalIsOpen}>
+              <ModalHeader />
               <button
                 className='close'
                 onClick={() => this.closeModal()}
@@ -93,6 +94,7 @@ class Application extends React.Component {
                 > >
                 </button>
               </div>
+              <Footer />
             </Modal>
           </div>
 

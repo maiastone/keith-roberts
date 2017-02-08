@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import photos from '../photos.js';
-import { Link } from 'react-router';
+import { IndexLink, Link } from 'react-router';
 
 
 const masonryOptions = {
@@ -34,19 +34,28 @@ class Gallery extends React.Component {
         <div className='gallery-container'>
 
           <div className='button-container'>
+
             <Link to='/'
-              id='gallery' className='filters'>
-            Featured
+              id='gallery'
+              activeClassName='active'
+              className='filters'>
+            All Work
             </Link>
 
             <Link to='/fine-art'
-              id='fine-art' className='filters'>
+              id='fine-art'
+              activeClassName='active'
+              className='filters'>
             Fine Art
             </Link>
 
-            <Link to='/undersea' className='filters'>
+            <Link to='/undersea'
+              id='undersea'
+              activeClassName='active'
+              className='filters'>
             Undersea
             </Link>
+
           </div>
 
           <Masonry
