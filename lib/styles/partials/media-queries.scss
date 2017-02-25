@@ -42,11 +42,8 @@
     justify-content: space-between;
     width: 25%;
   }
-  #modal-div {
-    margin-top: 5%;
-  }
   .modal-image-div {
-    margin-top: 25%;
+    margin-top: 8%;
   }
   .header-container {
     @include flexbox;
@@ -85,7 +82,7 @@
     margin-top: 10%;
   }
   .modal-image-div {
-    margin-top: 14%;
+    margin-top: 7%;
   }
 }
 @media screen and (max-height: 450px) {
